@@ -14,6 +14,10 @@ function App() {
     setTask([...task, newTask]);
     setInputTask("");
   };
+  const deleteTask = (id) => {
+    const updatedTasks = task.filter((taskItem) => taskItem.id !== id);
+    setTask(updatedTasks);
+  };
 
   const toggleComplete = (id) => {
     const updatedTask = task.map((tasks) => {
@@ -23,6 +27,7 @@ function App() {
     });
     setTask(updatedTask);
   };
+  //comment for git
 
   return (
     <>
@@ -47,7 +52,11 @@ function App() {
         </div>
 
         <div className="tasks px-30 mt-15 text-white ">
-          <Tasks task={task} toggleComplete={toggleComplete} />
+          <Tasks
+            task={task}
+            toggleComplete={toggleComplete}
+            deleteTask={deleteTask}
+          />
         </div>
       </div>
     </>

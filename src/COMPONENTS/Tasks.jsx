@@ -1,6 +1,6 @@
 import React from "react";
 
-function Tasks({ task, toggleComplete }) {
+function Tasks({ task, toggleComplete, deleteTask }) {
   return (
     <>
       {task.map((taskitems) => (
@@ -24,7 +24,10 @@ function Tasks({ task, toggleComplete }) {
               onChange={() => toggleComplete(taskitems.id)}
               className="w-6 h-6 accent-green-500 border-2"
             />
-            <button className="px-10 text-white hover:bg-red-600 py-2 bg-red-400 rounded-2xl">
+            <button
+              onClick={() => deleteTask(taskitems.id)}
+              className="px-10 text-white hover:bg-red-600 py-2 bg-red-400 rounded-2xl"
+            >
               DELETE
             </button>
           </div>
