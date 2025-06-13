@@ -1,21 +1,26 @@
 [
   {
+    "id": "1",
     "name": "public",
     "isFolder": true,
     "children": [
       {
+        "id": "2",
         "name": "vite.svg",
         "isFolder": false
       },
       {
+        "id": "3",
         "name": "public files",
         "isFolder": true,
         "children": [
           {
+            "id": "4",
             "name": "public repo",
             "isFolder": false
           },
           {
+            "id": "5",
             "name": "public documents",
             "isFolder": false
           }
@@ -24,43 +29,52 @@
     ]
   },
   {
+    "id": "6",
     "name": "src",
     "isFolder": true,
     "children": [
       {
+        "id": "7",
         "name": "App.js",
         "isFolder": false
       },
       {
+        "id": "8",
         "name": "components",
         "isFolder": true,
         "children": [
           {
+            "id": "9",
             "name": "Folder.jsx",
             "isFolder": false
           },
           {
+            "id": "10",
             "name": "Card.jsx",
             "isFolder": false
           }
         ]
       },
       {
+        "id": "11",
         "name": "main.jsx",
         "isFolder": false
       },
       {
+        "id": "12",
         "name": "index.css",
         "isFolder": false
       }
     ]
   },
   {
+    "id": "13",
     "name": "assets",
     "isFolder": true,
     "children": []
   },
   {
+    "id": "14",
     "name": "package.json",
     "isFolder": false
   }
