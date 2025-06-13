@@ -2,12 +2,29 @@ import { useState } from "react";
 import json from "./data.json";
 
 const List = ({ list }) => {
+  const [isExpanded, setIsExpanded] = useState({});
   return (
     <div className="container">
       {list.map((node) => (
-        <div className="pl-8">
-          <span key={node.id}>{node.name}</span>
-          {node?.children && <List list={node.children} />}
+        <div key={node.id} className="pl-8">
+          {node.isFolder && (
+            <span
+              onClick={() =>
+                setIsExpanded((prev) => ({
+                  ...prev,
+                  [node.name]: !prev[node.name],
+                }))
+              }
+              className="cursor-pointer"
+            >
+              {isExpanded?.[node.name] ? "-" : "+"}
+            </span>
+          )}
+
+          <span>{node.name}</span>
+          {isExpanded?.[node.name] && node?.children && (
+            <List list={node.children} />
+          )}
         </div>
       ))}
     </div>
