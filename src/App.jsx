@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import explorer from "./data/folderData";
+import Folder from "./COMPONENTS/Folder";
 
 const App = () => {
-  return <div>App</div>;
+  const [explorerData, setExplorerData] = useState(explorer);
+
+  return (
+    <div>
+      <Folder explorer={explorerData} />
+    </div>
+  );
 };
 
 export default App;
